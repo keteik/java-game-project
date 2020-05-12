@@ -5,33 +5,37 @@ import java.io.IOException;
 import game.Deck;
 import game.Rules;
 
-public class App extends Rules{
+public class App{
 	
 	public static void main(String[] args) throws IOException {
 		Deck deck = new Deck();
+		Rules rules = new Rules();
 		
 		deck.resetDeck();
 		deck.dealCards();
 		
-		//System.out.println(deck.firstPlayerHand.get(0).showCard());
-		//System.out.println(deck.firstPlayerHand.get(3).showCard());
+		//////////////////////
+		//testing game rules//
+		
+		rules.atut = "Leaves";
+		rules.firstColor = "Pikes";
 
+		int a = 6;
+		int b = 4;
 		
-		int a = 1;
-		int b = 6;
-		
-		
-		if(compareCards(deck.firstPlayerHand.get(a), deck.firstPlayerHand.get(b))) {
+
+		if(rules.compareCards(deck.firstPlayerHand.get(a), deck.firstPlayerHand.get(b))) {
+			
 			System.out.println("karta '" +deck.firstPlayerHand.get(a).showCard() +"'" +" wieksza od karty '" 
 								+deck.firstPlayerHand.get(b).showCard() +"'");
 		}
+		
 		else {
+			
 			System.out.println("karta '" +deck.firstPlayerHand.get(a).showCard() +"'" +" mniejsza od karty '" 
 					+deck.firstPlayerHand.get(b).showCard() +"'");
 		}
-			
-
-
+		
 
 	}
 

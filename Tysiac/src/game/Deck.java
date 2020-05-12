@@ -21,7 +21,6 @@ public class Deck{
 		 cards = new ArrayList<Card>(24);
 	}
 	
-	private static final Random gen = new Random();
 
 	public void resetDeck() {
 		
@@ -32,7 +31,7 @@ public class Deck{
 			}
 		}
 		
-		//Collections.shuffle(cards);
+		Collections.shuffle(cards);
 	
 	}
 	

@@ -1,311 +1,91 @@
 package game;
 
-public class Rules {
+public class Rules extends RankPriority{
 	
-	public static boolean firstCardIsGreater;
+	public boolean firstCardIsGreater;
+	public String firstColor = "";
+	public String atut = "";
+	
 	//private static String Pikes = "Pikes";
 	
 	@SuppressWarnings("unlikely-arg-type")
-	public static boolean compareCards(Card firstCard, Card secondCard) {
+	public boolean compareCards(Card firstCard, Card secondCard) {
 		
 		firstCardIsGreater = false;
 		
-		 
-		switch(firstCard.getColor()) {
-			case "Pikes":{
-				switch(firstCard.getRank()) {
-					case "9":{
-						if(secondCard.showCard().equals("Leaves_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_Jack")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_Jack")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Jack")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Jack")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}					
-						
-						else if(secondCard.showCard().equals("Pikes_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						break;
-					}
-					
-					case "Jack":{
-						if(secondCard.showCard().equals("Pikes_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_9")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						
-						else if(secondCard.showCard().equals("Leaves_Jack")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Jack")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Jack")) {
-							
-							firstCardIsGreater = true;
-							break;
-						}					
-						
-						else if(secondCard.showCard().equals("Pikes_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Queen")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_King")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_10")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Pikes_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Leaves_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Diamonds_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						else if(secondCard.showCard().equals("Hearts_Ace")) {
-							
-							firstCardIsGreater = false;
-							break;
-						}
-						
-						break;
-					}
-					
-					
+		if(atut.equals("")) {
+			
+			if(firstCard.getColor().equals(firstColor) && !(secondCard.getColor().equals(firstColor))){
+				
+				firstCardIsGreater = true;
+				return firstCardIsGreater;
 			}
-		
-		
+						
+			else if(!firstCard.getColor().equals(firstColor) && (secondCard.getColor().equals(firstColor))) {
+				
+				firstCardIsGreater = false;
+				return firstCardIsGreater;
+			}
+			
+			else if(firstCard.getColor().equals(firstColor) && (secondCard.getColor().equals(firstColor))) {
+				
+				firstCardIsGreater = getPriority(firstCard.rank, secondCard.rank);
+				return firstCardIsGreater;
+			}
+			
+			else if(!firstCard.getColor().equals(firstColor) && !(secondCard.getColor().equals(firstColor))) {
+				
+				if(firstCard.rank.equals(secondCard.rank)) {
+					
+					firstCardIsGreater = true;
+					return firstCardIsGreater;
+				}
+				
+				else {
+					
+					firstCardIsGreater = getPriority(firstCard.rank, secondCard.rank);
+					return firstCardIsGreater;
+				}
+			}
 		}
 		
+		else {
+			
+			if(firstCard.getColor().equals(atut) && !(secondCard.getColor().equals(atut))){
+				
+				firstCardIsGreater = true;
+				return firstCardIsGreater;
+			}
+						
+			else if(!firstCard.getColor().equals(atut) && (secondCard.getColor().equals(atut))) {
+				
+				firstCardIsGreater = false;
+				return firstCardIsGreater;
+			}
+			
+			else if(firstCard.getColor().equals(atut) && (secondCard.getColor().equals(atut))) {
+				
+				firstCardIsGreater = getPriority(firstCard.rank, secondCard.rank);
+				return firstCardIsGreater;
+			}
+			
+			else if(!firstCard.getColor().equals(atut) && !(secondCard.getColor().equals(atut))) {
+				
+				if(firstCard.rank.equals(secondCard.rank)) {
+					
+					firstCardIsGreater = true;
+					return firstCardIsGreater;
+				}
+				
+				else {
+					
+					firstCardIsGreater = getPriority(firstCard.rank, secondCard.rank);
+					return firstCardIsGreater;
+				}
+			}
+			
 		}
+		
 		return firstCardIsGreater;
 
 	}
