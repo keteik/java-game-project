@@ -1,5 +1,6 @@
 package window;
 
+import java.awt.EventQueue;
 import java.io.IOException;
 
 import game.Deck;
@@ -14,27 +15,15 @@ public class App{
 		deck.resetDeck();
 		deck.dealCards();
 		
-		//////////////////////
-		//testing game rules//
 		
-		rules.atut = "Leaves";
-		rules.firstColor = "Pikes";
+		GameWindow firstPlayerWindow = new GameWindow();
+		firstPlayerWindow.frmTysiac.setVisible(true);
+		firstPlayerWindow.frmTysiac.setTitle("Player 1");
+		
+		GameWindow secondPlayerWindow = new GameWindow();
+		secondPlayerWindow.frmTysiac.setVisible(true);
+		secondPlayerWindow.frmTysiac.setTitle("Player 2");
 
-		int a = 6;
-		int b = 4;
-		
-
-		if(rules.compareCards(deck.firstPlayerHand.get(a), deck.firstPlayerHand.get(b))) {
-			
-			System.out.println("karta '" +deck.firstPlayerHand.get(a).showCard() +"'" +" wieksza od karty '" 
-								+deck.firstPlayerHand.get(b).showCard() +"'");
-		}
-		
-		else {
-			
-			System.out.println("karta '" +deck.firstPlayerHand.get(a).showCard() +"'" +" mniejsza od karty '" 
-					+deck.firstPlayerHand.get(b).showCard() +"'");
-		}
 		
 
 	}
