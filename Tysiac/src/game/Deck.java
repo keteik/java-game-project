@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Deck{
 	
-	public List<Card> cards;	
-	public List<Card> firstPlayerHand;
-	public List<Card> secondPlayerHand;
-	public List<Card> firstTrick;
-	public List<Card> secondTrick;
+	public ArrayList<Card> cards;	
+	public ArrayList<Card> firstPlayerHand;
+	public ArrayList<Card> secondPlayerHand;
+	public ArrayList<Card> firstTrick;
+	public ArrayList<Card> secondTrick;
 	
 	public Deck(){
 		

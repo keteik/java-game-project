@@ -38,12 +38,12 @@ public class GameWindow {
 	JButton tenthCard;
 		
 	JButton firstTrickButton;
-	JLabel firstTrickLowerCard;
-	JLabel firstTrickUpperCard;
+	JLabel firstTrickRightCard;
+	JLabel firstTrickLeftCard;
 	
 	JButton secondTrickButton;
-	JLabel secondTrickLowerCard;
-	JLabel secondTrickUpperCard;
+	JLabel secondTrickRightCard;
+	JLabel secondTrickLeftCard;
 	
 	JLabel currentColor;
 	
@@ -162,35 +162,39 @@ public class GameWindow {
 		frmTysiac.getContentPane().add(firstTrickPanel, BorderLayout.WEST);
 		
 		firstTrickButton = new JButton("");
+		
 		firstTrickButton.setIcon(new ImageIcon(path.path +"Cardback.png"));
 		
-		firstTrickLowerCard = new JLabel("");
+		firstTrickRightCard = new JLabel("");
+		firstTrickRightCard.setVisible(false);
 		
-		firstTrickUpperCard = new JLabel("");
+		firstTrickLeftCard = new JLabel("");
+		firstTrickLeftCard.setVisible(false);
 		GroupLayout gl_firstTrickPanel = new GroupLayout(firstTrickPanel);
 		gl_firstTrickPanel.setHorizontalGroup(
 			gl_firstTrickPanel.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_firstTrickPanel.createSequentialGroup()
+					.addContainerGap()
 					.addGroup(gl_firstTrickPanel.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_firstTrickPanel.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(firstTrickUpperCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+							.addComponent(firstTrickLeftCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-							.addComponent(firstTrickLowerCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
+							.addComponent(firstTrickRightCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+							.addContainerGap())
 						.addGroup(gl_firstTrickPanel.createSequentialGroup()
-							.addGap(60)
-							.addComponent(firstTrickButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap())
+							.addGap(56)
+							.addComponent(firstTrickButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+							.addGap(64))))
 		);
 		gl_firstTrickPanel.setVerticalGroup(
-			gl_firstTrickPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_firstTrickPanel.createSequentialGroup()
-					.addContainerGap(83, Short.MAX_VALUE)
+			gl_firstTrickPanel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_firstTrickPanel.createSequentialGroup()
+					.addGap(105)
 					.addComponent(firstTrickButton, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-					.addGap(64)
+					.addGap(18, 18, Short.MAX_VALUE)
 					.addGroup(gl_firstTrickPanel.createParallelGroup(Alignment.LEADING)
-						.addComponent(firstTrickUpperCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(firstTrickLowerCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
+						.addComponent(firstTrickLeftCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+						.addComponent(firstTrickRightCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
 					.addGap(64))
 		);
 		firstTrickPanel.setLayout(gl_firstTrickPanel);
@@ -202,9 +206,11 @@ public class GameWindow {
 		secondTrickButton = new JButton("");
 		secondTrickButton.setIcon(new ImageIcon(path.path +"Cardback.png"));
 		
-		secondTrickLowerCard = new JLabel("");
+		secondTrickRightCard = new JLabel("");
+		secondTrickRightCard.setVisible(false);
 		
-		secondTrickUpperCard = new JLabel("");
+		secondTrickLeftCard = new JLabel("");
+		secondTrickLeftCard.setVisible(false);
 		GroupLayout gl_secondTrickPanel = new GroupLayout(secondTrickPanel);
 		gl_secondTrickPanel.setHorizontalGroup(
 			gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING)
@@ -212,24 +218,25 @@ public class GameWindow {
 					.addContainerGap()
 					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_secondTrickPanel.createSequentialGroup()
-							.addComponent(secondTrickUpperCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+							.addComponent(secondTrickLeftCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-							.addComponent(secondTrickLowerCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+							.addComponent(secondTrickRightCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap())
 						.addGroup(Alignment.TRAILING, gl_secondTrickPanel.createSequentialGroup()
+							.addGap(60)
 							.addComponent(secondTrickButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-							.addGap(66))))
+							.addGap(69))))
 		);
 		gl_secondTrickPanel.setVerticalGroup(
 			gl_secondTrickPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_secondTrickPanel.createSequentialGroup()
-					.addGap(83)
+				.addGroup(Alignment.TRAILING, gl_secondTrickPanel.createSequentialGroup()
+					.addGap(106)
 					.addComponent(secondTrickButton, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-					.addGap(64)
-					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.BASELINE)
-						.addComponent(secondTrickLowerCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(secondTrickUpperCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(64, Short.MAX_VALUE))
+					.addGap(18)
+					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING, false)
+						.addComponent(secondTrickRightCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+						.addComponent(secondTrickLeftCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
+					.addGap(63))
 		);
 		secondTrickPanel.setLayout(gl_secondTrickPanel);
 		
