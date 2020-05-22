@@ -20,18 +20,32 @@ public class App extends CardIcon{
 		final TrickAction trickAction = new TrickAction();
 		final GameWindow firstPlayerWindow = new GameWindow();
 		final GameWindow secondPlayerWindow = new GameWindow();
+		final BindingWindow firstPlayerBingingWindow = new BindingWindow();
+		final BindingWindow secondPlayerBingingWindow = new BindingWindow();
+
+		firstPlayerWindow.frmTysiac.setVisible(true);
+		secondPlayerWindow.frmTysiac.setVisible(true);
+		firstPlayerWindow.frmTysiac.setEnabled(false);
+		secondPlayerWindow.frmTysiac.setEnabled(false);
+		
+		firstPlayerBingingWindow.setTitle("Player 1 binding");
+		secondPlayerBingingWindow.setTitle("Player 2 binding");
+
+		firstPlayerBingingWindow.setVisible(true);
+		secondPlayerBingingWindow.setVisible(true);
+
 
 
 		deck.resetDeck();
 		deck.dealCards();
 				
-		firstPlayerWindow.frmTysiac.setVisible(true);
+		//firstPlayerWindow.frmTysiac.setVisible(true);
 		firstPlayerWindow.frmTysiac.setTitle("Player 1");
 		setPlayerCardIcon(firstPlayerWindow, deck.firstPlayerHand);
 		setTrickCardIcon(firstPlayerWindow, deck.firstTrick, deck.secondTrick);
 
 		
-		secondPlayerWindow.frmTysiac.setVisible(true);
+		//secondPlayerWindow.frmTysiac.setVisible(true);
 		secondPlayerWindow.frmTysiac.setTitle("Player 2");
 		setPlayerCardIcon(secondPlayerWindow, deck.secondPlayerHand);
 		setTrickCardIcon(secondPlayerWindow, deck.firstTrick, deck.secondTrick);
