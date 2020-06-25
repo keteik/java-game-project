@@ -51,6 +51,17 @@ public class GameWindow {
 	JLabel secondPlayerPlayingCard;
 	
 	ImagePath path = new ImagePath();
+	JButton firstCardTrick;
+	JButton secondCardTrick;
+	JButton thirdCardTrick;
+	JButton fourthCardTrick;
+	JButton fifthCardTrick;
+	JButton sixthCardTrick;
+	JButton seventhCardTrick;
+	JButton eighthCardTrick;
+	JButton ninthCardTrick;
+	JButton tenthCardTrick;
+
 	
 	
 
@@ -113,48 +124,101 @@ public class GameWindow {
 		
 		 tenthCard = new JButton("");
 		 
+		 ninthCardTrick = new JButton("New button");
+		 
+		 tenthCardTrick = new JButton("New button");
+		 
+		 eighthCardTrick = new JButton("New button");
+		 
+		 seventhCardTrick = new JButton("New button");
+		 
+		 sixthCardTrick = new JButton("New button");
+		 
+		 fifthCardTrick = new JButton("New button");
+		 
+		 fourthCardTrick = new JButton("New button");
+		 
+		 thirdCardTrick = new JButton("New button");
+		 
+		 secondCardTrick = new JButton("New button");
+		 
+		 firstCardTrick = new JButton("1");
+		 
 		 GroupLayout gl_playerCardsPanel = new GroupLayout(playerCardsPanel);
-		gl_playerCardsPanel.setHorizontalGroup(
-			gl_playerCardsPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_playerCardsPanel.createSequentialGroup()
-					.addGap(58)
-					.addComponent(firstCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(secondCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(thirdCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(fourthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(fifthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(sixthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(seventhCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(eighthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(ninthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(tenthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(69, Short.MAX_VALUE))
-		);
-		gl_playerCardsPanel.setVerticalGroup(
-			gl_playerCardsPanel.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_playerCardsPanel.createSequentialGroup()
-					.addGroup(gl_playerCardsPanel.createParallelGroup(Alignment.LEADING)
-						.addComponent(fifthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(sixthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(seventhCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(eighthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(ninthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(tenthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(fourthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(thirdCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(secondCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-						.addComponent(firstCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
-					.addGap(22))
-		);
+		 gl_playerCardsPanel.setHorizontalGroup(
+		 	gl_playerCardsPanel.createParallelGroup(Alignment.LEADING)
+		 		.addGroup(gl_playerCardsPanel.createSequentialGroup()
+		 			.addGap(58)
+		 			.addComponent(firstCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(secondCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(thirdCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(fourthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(fifthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(sixthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(seventhCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(eighthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(ninthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addPreferredGap(ComponentPlacement.RELATED)
+		 			.addComponent(tenthCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+		 			.addContainerGap(72, Short.MAX_VALUE))
+		 		.addGroup(Alignment.TRAILING, gl_playerCardsPanel.createSequentialGroup()
+		 			.addContainerGap(86, Short.MAX_VALUE)
+		 			.addComponent(firstCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(70)
+		 			.addComponent(secondCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(65)
+		 			.addComponent(thirdCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(66)
+		 			.addComponent(fourthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(66)
+		 			.addComponent(fifthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(62)
+		 			.addComponent(sixthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(70)
+		 			.addComponent(seventhCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(65)
+		 			.addComponent(eighthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(66)
+		 			.addComponent(ninthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(67)
+		 			.addComponent(tenthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 			.addGap(101))
+		 );
+		 gl_playerCardsPanel.setVerticalGroup(
+		 	gl_playerCardsPanel.createParallelGroup(Alignment.TRAILING)
+		 		.addGroup(gl_playerCardsPanel.createSequentialGroup()
+		 			.addGroup(gl_playerCardsPanel.createParallelGroup(Alignment.LEADING)
+		 				.addComponent(fifthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(sixthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(seventhCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(eighthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(ninthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(tenthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(fourthCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(thirdCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(secondCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(firstCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
+		 			.addGap(2)
+		 			.addGroup(gl_playerCardsPanel.createParallelGroup(Alignment.BASELINE)
+		 				.addComponent(ninthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(tenthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(eighthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(seventhCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(sixthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(fifthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(fourthCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(thirdCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(secondCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+		 				.addComponent(firstCardTrick, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)))
+		 );
 		playerCardsPanel.setLayout(gl_playerCardsPanel);
 		
 		JPanel firstTrickPanel = new JPanel();
@@ -175,13 +239,13 @@ public class GameWindow {
 			gl_firstTrickPanel.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_firstTrickPanel.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_firstTrickPanel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_firstTrickPanel.createSequentialGroup()
+					.addGroup(gl_firstTrickPanel.createParallelGroup(Alignment.TRAILING)
+						.addGroup(Alignment.LEADING, gl_firstTrickPanel.createSequentialGroup()
 							.addComponent(firstTrickLeftCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
 							.addComponent(firstTrickRightCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap())
-						.addGroup(gl_firstTrickPanel.createSequentialGroup()
+						.addGroup(Alignment.LEADING, gl_firstTrickPanel.createSequentialGroup()
 							.addGap(56)
 							.addComponent(firstTrickButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addGap(64))))
@@ -191,11 +255,11 @@ public class GameWindow {
 				.addGroup(gl_firstTrickPanel.createSequentialGroup()
 					.addGap(105)
 					.addComponent(firstTrickButton, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-					.addGap(18, 18, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
 					.addGroup(gl_firstTrickPanel.createParallelGroup(Alignment.LEADING)
 						.addComponent(firstTrickLeftCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
 						.addComponent(firstTrickRightCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
-					.addGap(64))
+					.addGap(54))
 		);
 		firstTrickPanel.setLayout(gl_firstTrickPanel);
 		
@@ -213,30 +277,30 @@ public class GameWindow {
 		secondTrickLeftCard.setVisible(false);
 		GroupLayout gl_secondTrickPanel = new GroupLayout(secondTrickPanel);
 		gl_secondTrickPanel.setHorizontalGroup(
-			gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING)
+			gl_secondTrickPanel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_secondTrickPanel.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.LEADING)
+					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_secondTrickPanel.createSequentialGroup()
 							.addComponent(secondTrickLeftCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
 							.addComponent(secondTrickRightCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap())
-						.addGroup(Alignment.TRAILING, gl_secondTrickPanel.createSequentialGroup()
+						.addGroup(gl_secondTrickPanel.createSequentialGroup()
 							.addGap(60)
 							.addComponent(secondTrickButton, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
 							.addGap(69))))
 		);
 		gl_secondTrickPanel.setVerticalGroup(
-			gl_secondTrickPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_secondTrickPanel.createSequentialGroup()
+			gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_secondTrickPanel.createSequentialGroup()
 					.addGap(106)
 					.addComponent(secondTrickButton, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addGroup(gl_secondTrickPanel.createParallelGroup(Alignment.TRAILING, false)
 						.addComponent(secondTrickRightCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
 						.addComponent(secondTrickLeftCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
-					.addGap(63))
+					.addGap(60))
 		);
 		secondTrickPanel.setLayout(gl_secondTrickPanel);
 		
@@ -273,20 +337,22 @@ public class GameWindow {
 		gl_playingCardsPanel.setHorizontalGroup(
 			gl_playingCardsPanel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_playingCardsPanel.createSequentialGroup()
-					.addGap(235)
+					.addGap(59)
 					.addGroup(gl_playingCardsPanel.createParallelGroup(Alignment.LEADING)
 						.addComponent(secondPlayerPlayingCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-						.addComponent(firstPlayerPlayingCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
-					.addContainerGap(240, Short.MAX_VALUE))
+						.addGroup(gl_playingCardsPanel.createSequentialGroup()
+							.addGap(55)
+							.addComponent(firstPlayerPlayingCard, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap(331, Short.MAX_VALUE))
 		);
 		gl_playingCardsPanel.setVerticalGroup(
-			gl_playingCardsPanel.createParallelGroup(Alignment.TRAILING)
-				.addGroup(Alignment.LEADING, gl_playingCardsPanel.createSequentialGroup()
+			gl_playingCardsPanel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_playingCardsPanel.createSequentialGroup()
 					.addGap(97)
 					.addComponent(secondPlayerPlayingCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(firstPlayerPlayingCard, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(98, Short.MAX_VALUE))
+					.addContainerGap(72, Short.MAX_VALUE))
 		);
 		playingCardsPanel.setLayout(gl_playingCardsPanel);
 	}

@@ -31,7 +31,7 @@ public class TrickAction  extends ImagePath{
 			JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz 2 karty które chcesz oddaæ.", 
 					"Musik", JOptionPane.PLAIN_MESSAGE);
 			
-			playerWindow.firstCard.addActionListener(new ActionListener() {
+			playerWindow.firstCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -51,7 +51,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.secondCard.addActionListener(new ActionListener() {
+			playerWindow.secondCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -70,7 +70,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.thirdCard.addActionListener(new ActionListener() {
+			playerWindow.thirdCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -89,7 +89,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.fourthCard.addActionListener(new ActionListener() {
+			playerWindow.fourthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -108,7 +108,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.fifthCard.addActionListener(new ActionListener() {
+			playerWindow.fifthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -127,7 +127,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.sixthCard.addActionListener(new ActionListener() {
+			playerWindow.sixthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -146,7 +146,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.seventhCard.addActionListener(new ActionListener() {
+			playerWindow.seventhCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -165,7 +165,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.eighthCard.addActionListener(new ActionListener() {
+			playerWindow.eighthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -184,7 +184,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.ninthCard.addActionListener(new ActionListener() {
+			playerWindow.ninthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -203,7 +203,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.tenthCard.addActionListener(new ActionListener() {
+			playerWindow.tenthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -236,7 +236,7 @@ public class TrickAction  extends ImagePath{
 			JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz 2 karty które chcesz oddaæ.", 
 					"Musik", JOptionPane.PLAIN_MESSAGE);
 			
-			playerWindow.firstCard.addActionListener(new ActionListener() {
+			playerWindow.firstCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -246,7 +246,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -256,7 +256,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.secondCard.addActionListener(new ActionListener() {
+			playerWindow.secondCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -266,7 +266,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -275,7 +275,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.thirdCard.addActionListener(new ActionListener() {
+			playerWindow.thirdCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -285,7 +285,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -294,7 +294,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.fourthCard.addActionListener(new ActionListener() {
+			playerWindow.fourthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -304,7 +304,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -313,7 +313,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.fifthCard.addActionListener(new ActionListener() {
+			playerWindow.fifthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -323,7 +323,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -332,7 +332,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.sixthCard.addActionListener(new ActionListener() {
+			playerWindow.sixthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -342,7 +342,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -351,7 +351,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.seventhCard.addActionListener(new ActionListener() {
+			playerWindow.seventhCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -361,7 +361,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -370,7 +370,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.eighthCard.addActionListener(new ActionListener() {
+			playerWindow.eighthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -380,7 +380,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -389,7 +389,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.ninthCard.addActionListener(new ActionListener() {
+			playerWindow.ninthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -399,7 +399,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
@@ -408,7 +408,7 @@ public class TrickAction  extends ImagePath{
 				}
 			});
 			
-			playerWindow.tenthCard.addActionListener(new ActionListener() {
+			playerWindow.tenthCardTrick.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(validTrickCard == 0 || validTrickCard == 1) {
 											
@@ -418,7 +418,7 @@ public class TrickAction  extends ImagePath{
 						if(validTrickCard == 0)
 							playerWindow.secondTrickLeftCard.setVisible(false);
 						else {
-							playerWindow.firstTrickRightCard.setVisible(false);
+							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
 						}
