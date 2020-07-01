@@ -92,8 +92,7 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
-							enableCards(playerWindow, opponentWindow);
-							
+							enableCards(playerWindow, opponentWindow);					
 						}
 
 						validTrickCard += 1;

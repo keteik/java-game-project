@@ -168,7 +168,7 @@ public class App extends CardIcon{
 				final App app = new App();
 				final DealingAction dealingAction = new DealingAction();
 				final BiddingAction biddingAction = new BiddingAction();
-				String string;
+				String state;
 				client = new Client(2, "127.0.0.1", 5000);
 			
 				secondPlayerWindow.frmTysiac.setTitle("Player 2");
@@ -194,7 +194,7 @@ public class App extends CardIcon{
 												deck.firstPlayerHand, secondPlayerWinCards, 
 												firstPlayerWinCards);
 								
-				string = client.clientReadString();
+				state = client.clientReadString();
 				while(!deck.secondPlayerHand.isEmpty()) {	
 					secondPlayerScore = dealingAction.getPoints(secondPlayerWinCards);
 					System.out.println(secondPlayerScore);
