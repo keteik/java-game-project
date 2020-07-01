@@ -24,8 +24,7 @@ public class Card {
 		this.color = colors[i];
 		this.rank = ranks[j];
 	}
-	
-	
+		
 	public String showCard() {
 		return color + "_" + rank;
 	}
@@ -37,6 +36,4 @@ public class Card {
 	public String getRank() {
 		return rank;
 	}
-	
-
 }

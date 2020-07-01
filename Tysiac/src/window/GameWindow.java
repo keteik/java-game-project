@@ -124,25 +124,35 @@ public class GameWindow {
 		
 		 tenthCard = new JButton("");
 		 
-		 ninthCardTrick = new JButton("New button");
+		 ninthCardTrick = new JButton("");
+		 ninthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\9.png"));
 		 
-		 tenthCardTrick = new JButton("New button");
+		 tenthCardTrick = new JButton("");
+		 tenthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\10.png"));
 		 
-		 eighthCardTrick = new JButton("New button");
+		 eighthCardTrick = new JButton("");
+		 eighthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\8.png"));
 		 
-		 seventhCardTrick = new JButton("New button");
+		 seventhCardTrick = new JButton("");
+		 seventhCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\7.png"));
 		 
-		 sixthCardTrick = new JButton("New button");
+		 sixthCardTrick = new JButton("");
+		 sixthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\6.png"));
 		 
-		 fifthCardTrick = new JButton("New button");
+		 fifthCardTrick = new JButton("");
+		 fifthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\5.png"));
 		 
-		 fourthCardTrick = new JButton("New button");
+		 fourthCardTrick = new JButton("");
+		 fourthCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\4.png"));
 		 
-		 thirdCardTrick = new JButton("New button");
+		 thirdCardTrick = new JButton("");
+		 thirdCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\3.png"));
 		 
-		 secondCardTrick = new JButton("New button");
+		 secondCardTrick = new JButton("");
+		 secondCardTrick.setIcon(new ImageIcon(path.path +"2.png"));
 		 
-		 firstCardTrick = new JButton("1");
+		 firstCardTrick = new JButton("");
+		 firstCardTrick.setIcon(new ImageIcon("C:\\Users\\krzysztof\\Desktop\\Karty\\1.png"));
 		 
 		 GroupLayout gl_playerCardsPanel = new GroupLayout(playerCardsPanel);
 		 gl_playerCardsPanel.setHorizontalGroup(

@@ -4,10 +4,12 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import game.Card;
 import game.Deck;
 import game.Rules;
 import network.Client;
@@ -15,7 +17,10 @@ import network.Server;
 
 public class App extends CardIcon{
 	
-	static int score = 0;
+	static int firstPlayerScore = 0;
+	static int secondPlayerScore = 0;
+	static int bid;
+	
 	static Server server = null;
 	static Client client = null;
 	final static Deck deck = new Deck();
@@ -29,6 +34,10 @@ public class App extends CardIcon{
 	static boolean trick = false;
 	static int counter = 0;
 	static boolean firstPlayerWin = false; 
+	
+	public static ArrayList<Card> firstPlayerWinCards = new ArrayList<Card>(10);
+	public static ArrayList<Card> secondPlayerWinCards = new ArrayList<Card>(10);
+
 
 	
 	
@@ -38,7 +47,28 @@ public class App extends CardIcon{
 		  }
 	
 	public void takeTrick() {
+		firstPlayerWindow.firstCard.setEnabled(false);
+		firstPlayerWindow.secondCard.setEnabled(false);
+		firstPlayerWindow.thirdCard.setEnabled(false);
+		firstPlayerWindow.fourthCard.setEnabled(false);
+		firstPlayerWindow.fifthCard.setEnabled(false);
+		firstPlayerWindow.sixthCard.setEnabled(false);
+		firstPlayerWindow.seventhCard.setEnabled(false);
+		firstPlayerWindow.eighthCard.setEnabled(false);
+		firstPlayerWindow.ninthCard.setEnabled(false);
+		firstPlayerWindow.tenthCard.setEnabled(false);
 		
+		secondPlayerWindow.firstCard.setEnabled(false);
+		secondPlayerWindow.secondCard.setEnabled(false);
+		secondPlayerWindow.thirdCard.setEnabled(false);
+		secondPlayerWindow.fourthCard.setEnabled(false);
+		secondPlayerWindow.fifthCard.setEnabled(false);
+		secondPlayerWindow.sixthCard.setEnabled(false);
+		secondPlayerWindow.seventhCard.setEnabled(false);
+		secondPlayerWindow.eighthCard.setEnabled(false);
+		secondPlayerWindow.ninthCard.setEnabled(false);
+		secondPlayerWindow.tenthCard.setEnabled(false);
+				
 		firstPlayerWindow.firstTrickButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				trickAction.getTrick(firstPlayerWindow, secondPlayerWindow, "first_trick", 
@@ -80,15 +110,12 @@ public class App extends CardIcon{
 		
 		deck.resetDeck();
 		deck.dealCards();
-		
-		
-		
+			
 		
 		Thread serverThread = new Thread(new Runnable(){
 			@Override
 			public void run() {
 				
-				String string;
 				server = new Server(5000);
 				final BiddingAction biddingAction = new BiddingAction();
 				final DealingAction dealingAction = new DealingAction();
@@ -105,44 +132,31 @@ public class App extends CardIcon{
 				
 				biddingAction.bidServer(server, firstPlayerBiddingWindow, firstPlayerWindow);
 				int tmp = biddingAction.getClientBid(server);
-				if(tmp > score )
-					score = tmp;
-				
-				
+				if(tmp > bid )
+					bid = tmp;
+								
 				firstPlayerWindow.frmTysiac.setVisible(true);
 				firstPlayerWindow.frmTysiac.setEnabled(true);
 
-				app.takeTrick();
-				
-									
-				
-				
-
+				app.takeTrick();												
 				dealingAction.giveCardServer(firstPlayerWindow, server, deck.firstPlayerHand, trick);
 				firstPlayerWin = dealingAction.checkFirstPlayerWin(server);
-				System.out.println(firstPlayerWin);
+				server.serverWriteString("start");
 				
 				while(!deck.firstPlayerHand.isEmpty()) {
 					if(firstPlayerWin) {
 						firstPlayerWindow.frmTysiac.setVisible(true);
 						dealingAction.giveCardServer(firstPlayerWindow, server, deck.firstPlayerHand, trick);
-						firstPlayerWin = dealingAction.checkFirstPlayerWin(server);				
+						firstPlayerWin = dealingAction.checkFirstPlayerWin(server);	
+						
 					}
 					else {
-						server.serverWriteString("secondPlayerWin");
 						dealingAction.showCardsServer(firstPlayerWindow, server, deck.firstPlayerHand, 
-														deck.secondPlayerHand);
-					
-					}
-					string = server.serverReadString(); 
-				}
-
-				
-			}
-	
-			
-
-		
+														deck.secondPlayerHand, firstPlayerWinCards, 
+														secondPlayerWinCards);
+					}			
+				}				
+			}	
 		});
 		serverThread.start();
 		
@@ -152,24 +166,19 @@ public class App extends CardIcon{
 			public void run() {
 				
 				final App app = new App();
-				
-				client = new Client(2, "127.0.0.1", 5000);
 				final DealingAction dealingAction = new DealingAction();
-
 				final BiddingAction biddingAction = new BiddingAction();
-				boolean roundWinner = false; 
 				String string;
-
-				
+				client = new Client(2, "127.0.0.1", 5000);
+			
 				secondPlayerWindow.frmTysiac.setTitle("Player 2");
 				secondPlayerBiddingWindow.setTitle("Player 2 binding");
 
 				setPlayerCardIcon(secondPlayerWindow, deck.secondPlayerHand);
-				setTrickCardIcon(secondPlayerWindow, deck.firstTrick, deck.secondTrick);
+				setTrickCardIcon(secondPlayerWindow, deck.firstTrick, deck.secondTrick);				
 				
-				
-				score = biddingAction.getServerBid(client);
-				if(score == 0) {
+				bid = biddingAction.getServerBid(client);
+				if(bid == 0) {
 					app.takeTrick();
 					secondPlayerWindow.frmTysiac.setEnabled(true);
 					secondPlayerWindow.frmTysiac.setVisible(true);
@@ -179,35 +188,32 @@ public class App extends CardIcon{
 					secondPlayerWindow.frmTysiac.setEnabled(false);		
 					secondPlayerBiddingWindow.setEnabled(true);
 					secondPlayerBiddingWindow.setVisible(true);
-					biddingAction.bidClient(client, secondPlayerBiddingWindow, secondPlayerWindow, score);
+					biddingAction.bidClient(client, secondPlayerBiddingWindow, secondPlayerWindow, bid);
 				}
 				dealingAction.showCardsClient(secondPlayerWindow, client, deck.secondPlayerHand, 
-												deck.firstPlayerHand);
-				
-				
-				while(!deck.secondPlayerHand.isEmpty()) {
-					string = client.clientReadString();	
+												deck.firstPlayerHand, secondPlayerWinCards, 
+												firstPlayerWinCards);
+								
+				string = client.clientReadString();
+				while(!deck.secondPlayerHand.isEmpty()) {	
+					secondPlayerScore = dealingAction.getPoints(secondPlayerWinCards);
+					System.out.println(secondPlayerScore);
 					if(!firstPlayerWin) {
 						secondPlayerWindow.frmTysiac.setVisible(true);
-						dealingAction.giveCardClient(secondPlayerWindow, client, deck.secondPlayerHand, 
-														trick);
+						dealingAction.giveCardClient(secondPlayerWindow, client, deck.secondPlayerHand, 														trick);
 						firstPlayerWin = dealingAction.checkSecondPlayerWin(client);
-					}
-					else {
+						}
+					else
 						dealingAction.showCardsClient(secondPlayerWindow, client, deck.secondPlayerHand, 
-								deck.firstPlayerHand);
-						client.clientWriteString("FirstPlayerWin");
+								deck.firstPlayerHand,secondPlayerWinCards, firstPlayerWinCards);
+					if(deck.secondPlayerHand.isEmpty()) {
+						secondPlayerScore = dealingAction.getPoints(secondPlayerWinCards);
+						System.out.println(secondPlayerScore);
 					}
-				}
-
+											
+				}				
 			}
 		});
 		clientThread.start();
-		
-		
-	
-		
-
 	}
-
 }

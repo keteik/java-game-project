@@ -14,9 +14,57 @@ public class TrickAction  extends ImagePath{
 	
 	int validTrickCard = 0;
 
+	public void enableCards(final GameWindow playerWindow, final GameWindow opponentWindow) {
+		
+		playerWindow.firstCard.setEnabled(true);
+		playerWindow.secondCard.setEnabled(true);
+		playerWindow.thirdCard.setEnabled(true);
+		playerWindow.fourthCard.setEnabled(true);
+		playerWindow.fifthCard.setEnabled(true);
+		playerWindow.sixthCard.setEnabled(true);
+		playerWindow.seventhCard.setEnabled(true);
+		playerWindow.eighthCard.setEnabled(true);
+		playerWindow.ninthCard.setEnabled(true);
+		playerWindow.tenthCard.setEnabled(true);
+		
+		opponentWindow.firstCard.setEnabled(true);
+		opponentWindow.secondCard.setEnabled(true);
+		opponentWindow.thirdCard.setEnabled(true);
+		opponentWindow.fourthCard.setEnabled(true);
+		opponentWindow.fifthCard.setEnabled(true);
+		opponentWindow.sixthCard.setEnabled(true);
+		opponentWindow.seventhCard.setEnabled(true);
+		opponentWindow.eighthCard.setEnabled(true);
+		opponentWindow.ninthCard.setEnabled(true);
+		opponentWindow.tenthCard.setEnabled(true);
+		
+		playerWindow.firstCardTrick.setVisible(false);
+		playerWindow.secondCardTrick.setVisible(false);
+		playerWindow.thirdCardTrick.setVisible(false);
+		playerWindow.fourthCardTrick.setVisible(false);
+		playerWindow.fifthCardTrick.setVisible(false);
+		playerWindow.sixthCardTrick.setVisible(false);
+		playerWindow.seventhCardTrick.setVisible(false);
+		playerWindow.eighthCardTrick.setVisible(false);
+		playerWindow.ninthCardTrick.setVisible(false);
+		playerWindow.tenthCardTrick.setVisible(false);
+		
+		opponentWindow.firstCardTrick.setVisible(false);
+		opponentWindow.secondCardTrick.setVisible(false);
+		opponentWindow.thirdCardTrick.setVisible(false);
+		opponentWindow.fourthCardTrick.setVisible(false);
+		opponentWindow.fifthCardTrick.setVisible(false);
+		opponentWindow.sixthCardTrick.setVisible(false);
+		opponentWindow.seventhCardTrick.setVisible(false);
+		opponentWindow.eighthCardTrick.setVisible(false);
+		opponentWindow.ninthCardTrick.setVisible(false);
+		opponentWindow.tenthCardTrick.setVisible(false);
+		
+		
+	}
 	
 	
-	public void getTrick(final GameWindow playerWindow, GameWindow opponentWindow, String trick, 
+	public void getTrick(final GameWindow playerWindow, final GameWindow opponentWindow, String trick, 
 							final ArrayList<Card> cards, final ArrayList<Card> trickCards) {
 		
 		if(trick.equals("first_trick")) {
@@ -44,6 +92,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+							
 						}
 
 						validTrickCard += 1;
@@ -64,6 +114,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -83,6 +135,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -102,6 +156,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -121,6 +177,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -140,6 +198,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -159,6 +219,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -178,6 +240,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -197,6 +261,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -216,6 +282,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.firstTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -249,6 +317,7 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
 						}
 
 						validTrickCard += 1;
@@ -269,6 +338,10 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							
+							enableCards(playerWindow, opponentWindow);
+
+							
 						}
 						validTrickCard += 1;
 					}
@@ -288,6 +361,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -307,6 +382,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -326,6 +403,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -345,6 +424,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -364,6 +445,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -383,6 +466,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -402,6 +487,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
@@ -421,6 +508,8 @@ public class TrickAction  extends ImagePath{
 							playerWindow.secondTrickRightCard.setVisible(false);
 							JOptionPane.showMessageDialog(playerWindow.frmTysiac, "Wybierz karte aby zaczac rozgrywke.", 
 									"Zaczynamy!", JOptionPane.PLAIN_MESSAGE);
+							enableCards(playerWindow, opponentWindow);
+
 						}
 						validTrickCard += 1;
 					}
